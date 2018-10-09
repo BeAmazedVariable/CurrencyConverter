@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Currency Converter</string>
+    <string name="hintCAD">"Enter CAD amount "</string>
+    <string name="btnConvert">Convert</string>
+    <string name="prompt">Select the country</string>
+    <string-array name="txtCountry">
+        <item>United States(USD)</item>
+        <item>Europe(EUR)</item>
+        <item>Idian(INR)</item>
+        <item>Viet Nam(VND)</item>
+    </string-array>
+</resources>
