@@ -17,7 +17,10 @@ public class CurrencyConverter extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_currency_converter);
-
+        //Display the Action Bar Icon
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setLogo(R.mipmap.ic_launcher);
+        getSupportActionBar().setDisplayUseLogoEnabled(true);
         //Initiate instance of an object of the layout file
         final EditText cad= findViewById(R.id.txtCad);
         final Spinner country= findViewById(R.id.spnCountries);
