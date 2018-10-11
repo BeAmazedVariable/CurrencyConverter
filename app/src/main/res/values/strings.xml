@@ -6,7 +6,7 @@
     <string-array name="txtCountry">
         <item>United States(USD)</item>
         <item>Europe(EUR)</item>
-        <item>Idian(INR)</item>
-        <item>Viet Nam(VND)</item>
+        <item>Indian(INR)</item>
+        <item>Vietnam(VND)</item>
     </string-array>
 </resources>
