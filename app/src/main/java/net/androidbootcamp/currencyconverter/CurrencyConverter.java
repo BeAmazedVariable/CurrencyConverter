@@ -61,8 +61,11 @@ public class CurrencyConverter extends AppCompatActivity {
                 cadAmount= Double.parseDouble(cad.getText().toString());
                 countryChoice=country.getSelectedItemPosition();
 
+                //Declare an output format for the output
+                DecimalFormat currency =new DecimalFormat("###,###.##");
+
                 //Decision making statement to make sure the user input lower than $100000
-                if (cadAmount <100000)
+                if (cadAmount <= 100000)
                 {
                     //Decision making statements decide which convert rate and image should be use to calculate and indicate the appropriate amount money in the selected country
                     switch(countryChoice)
@@ -88,26 +91,17 @@ public class CurrencyConverter extends AppCompatActivity {
                             countryUnit = vietnamUnit;
                             break;
                     }
+                    //Indicate the appropriate currency in the selected country
+                    canada.setImageResource(R.drawable.canada);
+                    converted.setText(currency.format(cadAmount) + " " + canadaUnit + "  =  ");
+                    result.setText(currency.format(convertResult) + " " + countryUnit);
                 }
                 else
                 {
                     //Make a toast notification when the user input more than $100,000
                     Toast.makeText(CurrencyConverter.this,"We can't convert more than $100,000CAD",Toast.LENGTH_LONG).show();
                 }
-
-                //Declare an output format for the output
-                DecimalFormat currency =new DecimalFormat("###,###.##");
-
-                //Indicate the appropriate currency in the selected country
-                canada.setImageResource(R.drawable.canada);
-                converted.setText(currency.format(cadAmount) + " " + canadaUnit + "           =");
-                result.setText(currency.format(convertResult) + " " + countryUnit);
             }
         });
-
-
-
-
-
     }
 }
