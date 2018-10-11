@@ -14,16 +14,18 @@
         android:layout_marginStart="0dp"
         android:layout_marginLeft="0dp"
         android:layout_marginTop="5dp"
+        android:gravity="center_horizontal"
         android:orientation="horizontal">
 
         <ImageView
+            android:id="@+id/imgCanada"
             android:layout_width="24dp"
             android:layout_height="50dp"
-            android:src="@drawable/canada"
-            android:layout_marginTop="50dp"
+            android:layout_marginStart="60dp"
             android:layout_marginLeft="60dp"
-            android:layout_marginStart="60dp" 
-             />
+            android:layout_marginTop="50dp"
+            android:contentDescription="@string/imgCanda"
+            android:src="@drawable/canada" />
 
         <EditText
             android:id="@+id/txtCad"
@@ -35,7 +37,6 @@
             android:drawableStart="@drawable/ic_attach_money_black_24dp"
             android:drawableLeft="@drawable/ic_attach_money_black_24dp"
             android:ems="10"
-            android:gravity="center_vertical|center_horizontal"
             android:hint="@string/hintCAD"
             android:inputType="numberDecimal" />
     </LinearLayout>
@@ -50,7 +51,8 @@
         android:layout_alignParentTop="true"
         android:layout_marginTop="156dp"
         android:entries="@array/txtCountry"
-        android:prompt="@string/prompt" />
+        android:prompt="@string/prompt"
+        android:spinnerMode="dialog" />
 
     <Button
         android:id="@+id/btnConvert"
@@ -60,11 +62,52 @@
         android:layout_centerVertical="true"
         android:text="@string/btnConvert" />
 
-    <TextView
-        android:id="@+id/txtResult"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="182dp" />
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginBottom="129dp">
+
+        <ImageView
+            android:id="@+id/imgConverted"
+            android:layout_width="24dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="40dp"
+            android:contentDescription="@string/imgCanda" />
+
+        <TextView
+            android:id="@+id/txtConverted"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="50dp"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/imgResult"
+            android:layout_width="24dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="40dp"
+            android:contentDescription="@string/imgSelected" />
+
+        <TextView
+            android:id="@+id/txtResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="50dp"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
 </RelativeLayout>
