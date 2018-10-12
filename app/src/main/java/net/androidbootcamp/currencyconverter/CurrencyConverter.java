@@ -18,6 +18,7 @@ public class CurrencyConverter extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_currency_converter);
+
         //Display the Action Bar Icon
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setLogo(R.mipmap.ic_launcher);
@@ -49,11 +50,10 @@ public class CurrencyConverter extends AppCompatActivity {
                 final String indianUnit = "INR";
                 final String vietnamUnit = "VND";
 
-                //Declare variable to collect user input in CAD and the country has been selected to calculate the selected country currency
-                double cadAmount;
-                double convertResult = 0;
-                int countryChoice;
-                String countryUnit = "";
+                double cadAmount;           //Collect amount of CAD
+                double convertResult = 0;   //Convert money to selected country
+                int countryChoice;          //Collect selected country
+                String countryUnit = "";    //Unit currency of selected country
 
 
 
