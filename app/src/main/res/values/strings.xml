@@ -4,6 +4,7 @@
     <string name="btnConvert">Convert</string>
     <string name="prompt">Select the country</string>
     <string name="imgCanda">Canada Flag</string>
+    <string name="imgCad">Canada Money</string>
     <string name="imgSelected">Image of selected country\'s flag</string>
     <string-array name="txtCountry">
         <item>United States(USD)</item>
